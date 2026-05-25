@@ -30,15 +30,13 @@ Built as a portfolio project to demonstrate hands-on RAG, vector search, and LLM
 ## RAG Architecture
 
  INGESTION (offline, runs once)
-
 ──────────────────────────────
-
 Pega PDFs + Mendix GitHub docs
 → chunk (500 words, 50 overlap)
 → embed (384-dim vectors)
 → store in Qdrant Cloud
 QUERY (online, per request)
-────────────────────────────
+────────────────────────────\
 User question
 → embed question
 → cosine similarity search → top-k chunks
